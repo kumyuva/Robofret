@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="/aabbcc.png" type="image/png">
-<link rel="apple-touch-icon" href="/aabbcc.png">
+  <link rel="icon" href="/Robofret.png" type="image/png">
+<link rel="apple-touch-icon" href="/Robofret.png">
 <meta property="og:title" content="Robofret">
 <meta property="og:description" content="Engineering intelligent systems for the future — AI, ML, IoT, Drones, Robotics & Space technologies.">
 <meta property="og:image" content="https://robofret.com/favicon.png">
@@ -245,17 +245,63 @@
       border-top: 1px solid #1e293b;
     }
     #cookie button { padding: .5rem 1.2rem; }
+    /* TOP TRANSPARENT NAVBAR */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 14px 50px;
+  display: flex;
+  justify-content: right;
+  gap: 28px;
+  background: rgba(0, 0, 0, 0.25); /* transparent */
+  backdrop-filter: Blur(70px);
+  z-index: 999;
+}
+
+.top-nav a {
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.top-nav a:hover {
+  color: var(--accent);
+}
+
+/* PUSH HEADER DOWN SO NAV DOESN'T OVERLAP */
+header {
+  padding-top: 9rem;
+}
+footer {
+  clear: both;
+  position: relative;
+  z-index: 1;
+}
+
   </style>
 </head>
 <body>
+  <!-- TOP NAVIGATION -->
+<nav class="top-nav">
+  <a href="#">Home</a>
+  <a href="#technologies">Technology</a>
+  <a href="#clients">Clients</a>
+  <a href="#retail">Retail</a>
+  <a href="#about">About Us</a>
+  <a href="#contact">Contact Us</a>
+</nav>
+
 
 <header data-aos="fade-down">
-  <img src="aabbcc.png" alt="Robofret Logo" />
+  <img src="Robofret.png" alt="Robofret Logo" />
   <h1>ROBOFRET</h1>
   <p>Engineering intelligent systems for the future — AI, ML, IoT, Drones, Rovers, Space technologies, and immersive AR & VR.</p>
 </header>
 
-<section>
+  <section id="technologies">
   <h2 data-aos="fade-up">Our Technologies</h2>
    <p class="tech-intro" data-aos="fade-up" data-aos-delay="100">
     At Robofret Technologies, we build the future through a Design–Develop–Deliver (DDD) mindset, transforming ideas into powerful, real-world innovations. Our mission is to bridge imagination and execution by creating intelligent, scalable, and impact-driven technologies. <br>
@@ -265,51 +311,63 @@ We design and develop custom PCBs, AI/ML systems, and IoT solutions that enable 
 Driven by innovation and purpose, Robofret is shaping a smarter, connected future.
   </p>
   <div class="grid">
+    <a href="aiml.html">
     <div class="card" data-aos="fade-up">
       <img src="large.jpeg" />
       <h3>Artificial Intelligence & Machine Learning</h3>
       <p>Advanced AI models that learn, adapt, and optimize decision-making across industries.</p>
     </div>
+</a>
+    <a href="iot.html">
     <div class="card" data-aos="fade-up" data-aos-delay="100">
       <img src="iot.jpg" />
       <h3>Internet of Things</h3>
       <p>Secure, scalable IoT ecosystems enabling smart infrastructure and real-time intelligence.</p>
     </div>
-    <div class="card" data-aos="fade-up" data-aos-delay="200">
-      <img src="drone.webp" />
-      <h3>Drones</h3>
-      <p>High-performance aerial platforms for surveillance, mapping, and autonomous missions.</p>
-    </div>
+</a>
+    <a href="drone.html">
+  <div class="card" data-aos="fade-up" data-aos-delay="200">
+    <img src="drone.webp" />
+    <h3>Drones</h3>
+    <p>High-performance aerial platforms for surveillance, mapping, and autonomous missions.</p>
+  </div>
+</a>
+<a href="rover.html">
     <div class="card" data-aos="fade-up" data-aos-delay="300">
       <img src="roover.jpg" />
       <h3>Robotic Rovers</h3>
       <p>Intelligent ground robots designed for exploration and extreme environments.</p>
     </div>
+    </a>
+    <a href="space.html">
     <div class="card" data-aos="fade-up" data-aos-delay="400">
       <img src="skyroot.jpg" />
       <h3>Space Technologies</h3>
       <p>Next-generation space systems powering satellite and aerospace innovation.</p>
     </div>
+    </a>
+    <a href="arvr.html">
     <div class="card" data-aos="fade-up" data-aos-delay="500">
       <img src="ar-vr.webp" />
       <h3>AR & VR</h3>
       <p>Immersive extended reality solutions for training, simulation, and visualization.</p>
     </div>
+    </a>
   </div>
 </section>
 
-<section>
+  <section id="clients">
   <h2 data-aos="fade-up">Our Clients</h2>
   <div class="clients" data-aos="zoom-in">
     <span>Seedlore</span>
     <span>Hexstar</span>
-    <span>SpaceIndia</span>
+    <!-- <span>SpaceIndia</span> -->
     <!-- <span>Flipkart</span>
     <span>Amazon</span> -->
   </div>
 </section>
 
-  <section>
+    <section id="retail">
   <h2 data-aos="fade-up">Retail</h2>
   <div class="clients" data-aos="zoom-in">
     <!-- <span>Seedlore</span>
@@ -320,8 +378,7 @@ Driven by innovation and purpose, Robofret is shaping a smarter, connected futur
   </div>
 </section>
 
-
-<section class="about-section">
+  <section class="about-section" id="about">
   <h2 data-aos="fade-up">About Us</h2>
 
   <div class="team" data-aos="zoom-in">
@@ -346,7 +403,7 @@ I am Yuvraj Singh, Chief Technology Officer and an Electronics and Communication
 </section>
 
 
-<section>
+<section id="contact">
   <h2 data-aos="fade-up">Contact Us</h2>
   <form id="contact-form" data-aos="fade-up">
   <input type="text" name="user_name" placeholder="Your Name" required />
@@ -355,7 +412,10 @@ I am Yuvraj Singh, Chief Technology Officer and an Electronics and Communication
 
   <!-- Honeypot field (spam protection) -->
   <input type="text" name="company" style="display:none" tabindex="-1" autocomplete="off" />
-
+<!-- EmailJS required hidden fields -->
+<input type="hidden" name="name">
+<input type="hidden" name="email">
+<input type="hidden" name="time">
   <button type="submit">Send Message</button>
 </form>
 </section>
@@ -396,19 +456,19 @@ I am Yuvraj Singh, Chief Technology Officer and an Electronics and Communication
 
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
-  (function(){
-    emailjs.init('8TB6jgIPe32_mq9Wq'); // <-- replace with EmailJS Public Key
+  (function () {
+    emailjs.init('8TB6jgIPe32_mq9Wq'); // EmailJS Public Key
   })();
 
   const form = document.getElementById('contact-form');
   let lastSent = 0;
 
-  form.addEventListener('submit', function(e) {
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    // Honeypot check
+    // Honeypot check (spam protection)
     if (form.company.value !== '') {
-      return; // spam bot detected
+      return;
     }
 
     // Rate limiting (30 seconds)
@@ -418,9 +478,26 @@ I am Yuvraj Singh, Chief Technology Officer and an Electronics and Communication
       return;
     }
 
+    /* ===============================
+       REQUIRED VARIABLE MAPPING
+       =============================== */
+
+    // Map form fields to EmailJS template variables
+    form.querySelector('input[name="name"]').value =
+      form.querySelector('input[name="user_name"]').value;
+
+    form.querySelector('input[name="email"]').value =
+      form.querySelector('input[name="user_email"]').value;
+
+    form.querySelector('input[name="time"]').value =
+      new Date().toLocaleString();
+
+    /* =============================== */
+// form.time.value = new Date().toLocaleString();
+
     emailjs.sendForm(
-      'service_xyv6pmb',     // <-- replace
-      'template_eecw4tj',    // <-- replace
+      'service_xyv6pmb',
+      'template_eecw4tj',
       this
     ).then(() => {
       alert('Message sent successfully!');
@@ -432,14 +509,6 @@ I am Yuvraj Singh, Chief Technology Officer and an Electronics and Communication
   });
 </script>
 
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
