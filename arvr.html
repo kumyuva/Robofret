@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robofret | AR & VR Technologies</title>
+
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    /* TOP NAVIGATION (SAME AS OTHER PAGES) */
+    .top-nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 14px 50px;
+      display: flex;
+      justify-content: right;
+      gap: 28px;
+      z-index: 999;
+    }
+
+    .top-nav a {
+      color: #ffffff;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: color 0.3s ease;
+    }
+
+    .top-nav a:hover {
+      color: var(--accent);
+    }
+
+    :root {
+      --bg: #0a1020;
+      --bg-alt: #0f172a;
+      --card: #111827;
+      --text: #f8fafc;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+      --accent-2: #22d3ee;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(180deg, #0f0f0f, #050505);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 { font-weight: 600; }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    /* HEADER */
+    header {
+      padding: 9rem 1rem 4.5rem;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 3px;
+    }
+
+    header p {
+      color: var(--muted);
+      max-width: 900px;
+      margin: 1rem auto 0;
+    }
+
+    /* SECTION */
+    section {
+      padding: 4.5rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 2.5rem;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    /* CARD */
+    .card {
+      background: linear-gradient(180deg, var(--card), #020617);
+      padding: 1.8rem;
+      border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      transition: transform .4s ease, box-shadow .4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(56,189,248,.12),
+        transparent
+      );
+      opacity: 0;
+      transition: opacity .4s;
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+.card img {
+      width: 100%;
+      border-radius: 14px;
+      margin-bottom: 1rem;
+    }
+    .card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 30px 70px rgba(56,189,248,0.25);
+    }
+
+    .card h3 {
+      margin-bottom: .8rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: .95rem;
+      line-height: 1.6;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #3B4953;
+      padding: 2.5rem 1rem;
+      text-align: center;
+      margin-top: 4rem;
+      border-top: 1px solid #1e293b;
+    }
+
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+
+    .socials a {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .socials img {
+      width: 18px;
+      height: 18px;
+      filter: invert(1);
+    }
+
+    footer p {
+      color: var(--muted);
+      margin-top: 1rem;
+      font-size: .9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- TOP NAVIGATION -->
+<nav class="top-nav">
+  <a href="index.html">Home</a>
+  <a href="index.html#technologies">Technology</a>
+  <a href="index.html#clients">Clients</a>
+  <a href="index.html#retail">Retail</a>
+  <a href="index.html#about">About Us</a>
+  <a href="index.html#contact">Contact Us</a>
+</nav>
+
+<!-- HEADER -->
+<header data-aos="fade-down">
+  <div style="position:absolute; top:30px; left:30px;">
+    <a href="index.html" style="display:flex; align-items:center; gap:12px;">
+      <img src="Robofret.png" alt="Robofret Logo" style="width:120px;">
+      <span style="
+        font-size: 1.6rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      ">
+        ROBOFRET
+      </span>
+    </a>
+  </div>
+
+  <h1>AUGMENTED & VIRTUAL REALITY</h1>
+  <p>
+    Immersive technologies that merge physical and digital worlds —
+    transforming engineering, training, collaboration, and visualization.
+  </p>
+</header>
+
+<section>
+  <h2 data-aos="fade-up">AR / VR Solutions</h2>
+
+  <div class="grid">
+
+    <!-- CARD 1 -->
+    <div class="card" data-aos="fade-up">
+        <img src="arvr1.png" />
+      <h3>Industrial AR Overlays</h3>
+      <p>
+        Heads-up displays for field technicians that overlay live schematics,
+        repair guides, and real-time IoT data directly onto physical machinery.
+      </p>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <img src="arvr2.png" />
+      <h3>VR Safety Training Suites</h3>
+      <p>
+        Zero-risk virtual environments where employees practice handling
+        hazardous materials, fire emergencies, and heavy machinery operations.
+      </p>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <img src="arvr3.png" />
+      <h3>3D Architectural Walkthroughs</h3>
+      <p>
+        Full-scale virtual and augmented visualizations of buildings,
+        infrastructure, and smart cities — before construction even begins.
+      </p>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="card" data-aos="fade-up" data-aos-delay="300">
+        <img src="arvr4.png" />
+      <h3>Mixed Reality Telepresence</h3>
+      <p>
+        Holographic collaboration spaces enabling global engineering teams
+        to interact with 3D models and digital twins in real time.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="socials">
+    <a href="https://x.com/robofret?s=20" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg">
+      Twitter
+    </a>
+    <a href="https://www.linkedin.com/company/robofret/about/" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg">
+      LinkedIn
+    </a>
+    <a href="https://www.instagram.com/robofret" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg">
+      Instagram
+    </a>
+    <a href="https://wa.me/916303386135" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg">
+      WhatsApp
+    </a>
+    <a href="mailto:admin@robofret.com">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg">
+      admin@robofret.com
+    </a>
+  </div>
+  <p>© 2026 Robofret. All rights reserved.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ once: true, duration: 900, easing: 'ease-out-cubic' });
+</script>
+
+</body>
+</html>
