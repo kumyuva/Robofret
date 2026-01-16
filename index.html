@@ -280,10 +280,82 @@ footer {
   position: relative;
   z-index: 1;
 }
+/* MOBILE NAV */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #050505;
+  z-index: 1000;
+  padding: 12px 20px;
+}
+
+.mobile-nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-nav .brand {
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+#menuToggle {
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.mobile-links {
+  display: none;
+  flex-direction: column;
+  margin-top: 12px;
+}
+
+.mobile-links a {
+  padding: 10px 0;
+  border-bottom: 1px solid #1f2937;
+}
+
+/* RESPONSIVE RULE */
+@media (max-width: 768px) {
+  .top-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  header {
+    padding-top: 7rem;
+  }
+}
+
 
   </style>
 </head>
 <body>
+  <!-- MOBILE NAV -->
+<div class="mobile-nav">
+  <div class="mobile-nav-header">
+    <span class="brand">ROBOFRET</span>
+    <button id="menuToggle">☰</button>
+  </div>
+  <div class="mobile-links" id="mobileLinks">
+    <a href="index.html">Home</a>
+    <a href="index.html#technologies">Technology</a>
+    <a href="index.html#clients">Clients</a>
+    <a href="index.html#retail">Retail</a>
+    <a href="index.html#about">About Us</a>
+    <a href="index.html#contact">Contact Us</a>
+  </div>
+</div>
+
   <!-- TOP NAVIGATION -->
 <nav class="top-nav">
   <a href="#">Home</a>
@@ -509,6 +581,15 @@ I am Yuvraj Singh, Chief Technology Officer and an Electronics and Communication
   });
 </script>
 
+<script>
+  const toggle = document.getElementById("menuToggle");
+  const links = document.getElementById("mobileLinks");
+
+  toggle.addEventListener("click", () => {
+    links.style.display = links.style.display === "flex" ? "none" : "flex";
+  });
+</script>
 
 </body>
 </html>
+
