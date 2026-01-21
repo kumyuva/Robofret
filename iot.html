@@ -219,6 +219,50 @@
     justify-content: center;
   }
 }
+
+    /* Hamburger icon */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Nav links container */
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+  .top-nav {
+    justify-content: space-between;
+    padding: 14px 20px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #0b0b0b;
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
   </style>
 </head>
 
@@ -226,13 +270,18 @@
 
 <!-- TOP NAVIGATION -->
 <nav class="top-nav">
-  <a href="index.html">Home</a>
-  <a href="index.html#technologies">Technology</a>
-  <a href="index.html#clients">Clients</a>
-  <a href="index.html#retail">Retail</a>
-  <a href="index.html#about">About Us</a>
-  <a href="index.html#contact">Contact Us</a>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="index.html#technologies">Technology</a>
+    <a href="index.html#clients">Clients</a>
+    <a href="index.html#retail">Retail</a>
+    <a href="index.html#about">About Us</a>
+    <a href="index.html#contact">Contact Us</a>
+  </div>
 </nav>
+
 
 <!-- HEADER (UNCHANGED LOGO + NAME) -->
 <header data-aos="fade-down">
@@ -351,7 +400,13 @@
 <script>
   AOS.init({ once: true, duration: 900, easing: 'ease-out-cubic' });
 </script>
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show");
+  }
+</script>
 
 </body>
 </html>
+
 
