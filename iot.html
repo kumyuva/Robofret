@@ -102,6 +102,14 @@
 
     /* CARD */
     .card {
+  pointer-events: auto;
+}
+
+[data-aos] {
+  pointer-events: auto;
+}
+
+    .card {
       background: linear-gradient(180deg, var(--card), #020617);
       padding: 1.6rem;
       border-radius: 18px;
@@ -264,7 +272,7 @@
 <section>
   <h2 data-aos="fade-up">IoT Project Portfolio</h2>
   <div class="grid">
-    <div class="card" data-aos="fade-up">
+    <div data-aos="fade-up">
       <img src="iot1.png" />
       <h3>Smart Water Predictor</h3>
       <p>IoT Quality Analysis & Predictive Hydro-Informatics System.</p>
@@ -287,7 +295,8 @@
       </div>
     </div>
 
-    <div class="card" data-aos="fade-up" data-aos-delay="200">
+    <div data-aos="fade-up" data-aos-delay="200">
+  <div class="card">
       <img src="iot3.png" />
       <h3>IoT Weather Station</h3>
       <p>Real-time environmental monitoring with cloud visualization.</p>
@@ -356,4 +365,5 @@
 
 </body>
 </html>
+
 
