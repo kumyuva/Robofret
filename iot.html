@@ -94,11 +94,15 @@
     }
 
     /* GRID */
+    
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
     }
+    .grid > div {
+      display: contents;
+      }
 
     /* CARD */
     .card {
@@ -283,7 +287,8 @@
   </div>
   </div>
 
-    <div class="card" data-aos="fade-up" data-aos-delay="100">
+    <div data-aos="fade-up" data-aos-delay="100">
+  <div class="card">
       <img src="iot2.jpg" />
       <h3>IoT Home Automation</h3>
       <p>Voice & app-controlled smart home using ESP32 & Sinric Pro.</p>
@@ -306,7 +311,8 @@
       </div>
     </div>
 
-    <div class="card" data-aos="fade-up" data-aos-delay="300">
+    <div data-aos="fade-up" data-aos-delay="300">
+  <div class="card">
       <img src="iot4.jpg" />
       <h3>Smart Adaptive Street Lighting</h3>
       <p>Energy-efficient IoT system for smart cities.</p>
@@ -317,7 +323,8 @@
       </div>
     </div>
 
-    <div class="card" data-aos="fade-up" data-aos-delay="400">
+    <div data-aos="fade-up" data-aos-delay="400">
+  <div class="card">
       <img src="iot5.jpg" />
       <h3>Smart Dustbin</h3>
       <p>Touchless hygiene automation system.</p>
@@ -364,6 +371,7 @@
 
 </body>
 </html>
+
 
 
 
